@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DRAVIO s.r.o. – Demoličné práce | Rajecká dolina</title>
-    <meta name="description" content="DRAVIO s.r.o. – profesionálne demoličné práce, búracie práce, zemné práce a odvoz sutiny v Rajeckej doline a okolí. Nonstop dostupnosť, moderná technika, férové ceny.">
+    <meta name="description" content="DRAVIO s.r.o. – profesionálne demoličné práce, búracie práce, zemné práce a odvoz sutiny v Rajeckej doline a okolí. Zavolajte nonstop – sme tu 24 hodín denne.">
     <meta name="keywords" content="demoličné práce Rajecká dolina, búracie práce Rajec, demolácie Rajecké Teplice, zemné práce Rajecká dolina, demolačná firma Rajec, búranie stavieb, DRAVIO, demolácia budov">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="DRAVIO s.r.o. – Demoličné práce Rajecká dolina">
     <meta property="og:description" content="Profesionálne demoličné a búracie práce v Rajeckej doline. Moderná technika, nonstop dostupnosť.">
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://dravio.sk/">
+    <link rel="icon" href="images/logo.svg" type="image/svg+xml">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
 
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -23,72 +23,75 @@
       "name": "DRAVIO s.r.o.",
       "description": "Profesionálne demoličné práce, búracie práce, zemné práce a odvoz sutiny v Rajeckej doline",
       "areaServed": "Rajecká dolina, Rajec, Rajecké Teplice, Fačkov, Čičmany",
-      "serviceType": ["Demoličné práce", "Búracie práce", "Zemné práce", "Odvoz sutiny"],
+      "serviceType": ["Demoličné práce","Búracie práce","Zemné práce","Odvoz sutiny"],
       "openingHours": "Mo-Su 00:00-24:00",
       "telephone": "+421900000000"
     }
     </script>
 
     <style>
-        /* ===== RESET & BASE ===== */
+        /* ===== RESET ===== */
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; font-size: 16px; }
+        html { scroll-behavior: smooth; font-size: 18px; }
         body {
             font-family: 'Inter', sans-serif;
             background: #0a0a0c;
             color: #e2e8f0;
-            line-height: 1.7;
+            line-height: 1.75;
             overflow-x: hidden;
         }
         img { max-width: 100%; display: block; }
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
 
-        /* ===== CSS VARIABLES ===== */
+        /* ===== TOKENS ===== */
         :root {
             --black:      #0a0a0c;
             --black-mid:  #111116;
             --black-card: #16161c;
             --red:        #dc2626;
             --red-dark:   #b91c1c;
-            --red-glow:   rgba(220, 38, 38, 0.18);
+            --red-glow:   rgba(220,38,38,0.15);
             --steel:      #94a3b8;
             --steel-dim:  #64748b;
             --white:      #f8fafc;
-            --section-padding: 6rem 1.5rem;
+            --sp: 6rem 1.5rem;  /* section padding */
         }
 
-        /* ===== UTILITY ===== */
+        /* ===== UTILS ===== */
         .container { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
         .section-title {
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-size: clamp(2.4rem, 5.5vw, 4rem);
             font-weight: 900;
             text-align: center;
             margin-bottom: 0.5rem;
             color: var(--white);
             text-transform: uppercase;
-            letter-spacing: -0.5px;
         }
         .section-subtitle {
             text-align: center;
             color: var(--steel);
-            font-size: 1rem;
+            font-size: 1.05rem;
             margin-bottom: 3.5rem;
-            max-width: 580px;
+            max-width: 620px;
             margin-left: auto;
             margin-right: auto;
+            line-height: 1.7;
         }
         .accent { color: var(--red); }
+
+        /* ===== BUTTONS ===== */
         .btn {
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 0.6rem;
-            padding: 1rem 2.4rem;
+            padding: 1.1rem 2.6rem;
             background: var(--red);
             color: var(--white);
-            font-weight: 700;
-            font-size: 0.95rem;
+            font-weight: 800;
+            font-size: 1rem;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -110,55 +113,73 @@
         .btn:hover { background: var(--red-dark); transform: translateY(-2px); box-shadow: 0 8px 30px rgba(220,38,38,0.4); }
         .btn-outline {
             background: transparent;
-            border: 1.5px solid rgba(220,38,38,0.5);
+            border: 2px solid rgba(255,255,255,0.35);
             color: var(--white);
         }
-        .btn-outline:hover { background: var(--red); border-color: var(--red); box-shadow: 0 8px 30px rgba(220,38,38,0.35); }
-
-        /* ===== REVEAL ANIMATIONS ===== */
-        .reveal {
-            opacity: 0;
-            transform: translateY(36px);
-            transition: opacity 0.75s ease, transform 0.75s ease;
+        .btn-outline:hover { background: rgba(255,255,255,0.08); border-color: var(--white); box-shadow: none; }
+        .btn-lg { padding: 1.35rem 3rem; font-size: 1.1rem; }
+        .btn-phone {
+            background: var(--red);
+            font-size: 1.25rem;
+            padding: 1.3rem 2.8rem;
+            letter-spacing: 0;
+            text-transform: none;
+            font-weight: 800;
         }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .reveal-left {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: opacity 0.75s ease, transform 0.75s ease;
-        }
-        .reveal-left.active { opacity: 1; transform: translateX(0); }
-        .reveal-right {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: opacity 0.75s ease, transform 0.75s ease;
-        }
-        .reveal-right.active { opacity: 1; transform: translateX(0); }
+        .btn-phone:hover { background: var(--red-dark); }
 
         /* ===== SCROLL PROGRESS ===== */
         .scroll-progress {
-            position: fixed;
-            top: 0; left: 0;
+            position: fixed; top: 0; left: 0;
             height: 3px;
             background: var(--red);
             z-index: 1002;
             transition: width 0.1s;
-            box-shadow: 0 0 12px var(--red);
+            box-shadow: 0 0 10px var(--red);
         }
 
-        /* ===== HEADER / NAV ===== */
+        /* ===== FLOATING CALL BUTTON (always visible on mobile) ===== */
+        .float-call {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+            background: var(--red);
+            color: #fff;
+            font-weight: 800;
+            font-size: 1rem;
+            padding: 0.9rem 1.6rem;
+            border-radius: 50px;
+            box-shadow: 0 4px 24px rgba(220,38,38,0.5);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .float-call:hover { transform: translateY(-3px) scale(1.03); box-shadow: 0 8px 32px rgba(220,38,38,0.6); }
+        .float-call .fc-icon { font-size: 1.2rem; animation: ring 2.5s infinite; }
+        @keyframes ring {
+            0%,90%,100% { transform: rotate(0); }
+            92% { transform: rotate(-15deg); }
+            96% { transform: rotate(15deg); }
+            98% { transform: rotate(-10deg); }
+        }
+
+        /* ===== HEADER ===== */
         header {
             position: fixed;
             top: 0; left: 0; right: 0;
             z-index: 1000;
-            padding: 1.2rem 0;
-            transition: background 0.35s ease, box-shadow 0.35s ease, padding 0.35s ease;
+            padding: 1rem 0;
+            transition: background 0.35s, box-shadow 0.35s, padding 0.35s;
         }
         header.scrolled {
-            background: rgba(10,10,12,0.96);
+            background: rgba(10,10,12,0.97);
             backdrop-filter: blur(16px);
             box-shadow: 0 1px 0 rgba(220,38,38,0.2);
-            padding: 0.75rem 0;
+            padding: 0.6rem 0;
         }
         .nav-container {
             display: flex;
@@ -169,39 +190,36 @@
             padding: 0 1.5rem;
         }
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.7rem;
+        }
+        .logo-img {
+            width: 44px; height: 44px;
+            object-fit: contain;
+        }
+        .logo-text-wrap {
+            display: flex;
+            flex-direction: column;
+        }
+        .logo-name {
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.55rem;
             font-weight: 900;
             color: var(--white);
             letter-spacing: 2px;
             text-transform: uppercase;
-            display: flex;
-            align-items: center;
-            gap: 0.6rem;
-        }
-        .logo-mark {
-            width: 36px; height: 36px;
-            background: var(--red);
-            border-radius: 3px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.1rem;
-            font-weight: 900;
-            color: #fff;
-            letter-spacing: 0;
-        }
-        .logo-sub {
-            font-size: 0.6rem;
-            color: var(--steel);
-            font-weight: 500;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            display: block;
             line-height: 1;
-            margin-top: -2px;
         }
-        .logo-text { display: flex; flex-direction: column; }
+        .logo-tagline {
+            font-size: 0.58rem;
+            color: var(--steel);
+            font-weight: 600;
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            line-height: 1;
+            margin-top: 2px;
+        }
         .nav-links { display: flex; gap: 2.5rem; align-items: center; }
         .nav-links a {
             color: var(--steel);
@@ -223,21 +241,19 @@
         }
         .nav-links a:hover, .nav-links a.active { color: var(--white); }
         .nav-links a:hover::after, .nav-links a.active::after { transform: scaleX(1); }
+        .nav-cta {
+            background: var(--red);
+            color: #fff !important;
+            padding: 0.55rem 1.2rem;
+            border-radius: 4px;
+            font-weight: 700 !important;
+            letter-spacing: 0.5px !important;
+        }
+        .nav-cta:hover { background: var(--red-dark); }
+        .nav-cta::after { display: none; }
 
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            z-index: 1001;
-            padding: 5px;
-        }
-        .hamburger span {
-            width: 26px; height: 2px;
-            background: var(--white);
-            border-radius: 2px;
-            transition: all 0.3s ease;
-        }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; z-index: 1001; padding: 5px; }
+        .hamburger span { width: 26px; height: 2px; background: var(--white); border-radius: 2px; transition: all 0.3s; }
         .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
         .hamburger.open span:nth-child(2) { opacity: 0; }
         .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
@@ -245,29 +261,43 @@
         .mobile-nav {
             position: fixed;
             top: 0; right: -100%;
-            width: 100%;
-            height: 100vh;
-            background: rgba(10,10,12,0.98);
+            width: 100%; height: 100vh;
+            background: rgba(10,10,12,0.99);
             backdrop-filter: blur(24px);
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            gap: 2.5rem;
-            transition: right 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            gap: 2.2rem;
+            transition: right 0.4s cubic-bezier(0.4,0,0.2,1);
             z-index: 999;
         }
         .mobile-nav.open { right: 0; }
+        .mobile-nav .mobile-logo {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        .mobile-nav .mobile-logo img { width: 56px; height: 56px; }
         .mobile-nav a {
             color: var(--white);
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: 1.8rem;
+            font-size: 2rem;
             font-weight: 800;
             text-transform: uppercase;
             letter-spacing: 3px;
             transition: color 0.3s;
         }
         .mobile-nav a:hover { color: var(--red); }
+        .mobile-nav .mobile-call {
+            margin-top: 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--red) !important;
+            letter-spacing: 0 !important;
+        }
 
         /* ===== HERO ===== */
         #hero {
@@ -278,51 +308,48 @@
             justify-content: center;
             overflow: hidden;
         }
-        .hero-bg {
-            position: absolute;
-            inset: 0;
-            background: url('images/hero.png') center/cover no-repeat;
+
+        /* Slideshow */
+        .hero-bg { position: absolute; inset: 0; }
+        .hero-slide {
+            position: absolute; inset: 0;
+            background-size: cover;
+            background-position: center;
+            opacity: 0;
+            transition: opacity 1.2s ease-in-out;
         }
-        /* Animated noise grain overlay */
+        .hero-slide.active { opacity: 1; animation: kenburns 9s ease-out forwards; }
+        @keyframes kenburns { 0% { transform: scale(1.07); } 100% { transform: scale(1); } }
+
         .hero-grain {
-            position: absolute;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E");
-            opacity: 0.4;
+            position: absolute; inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.07'/%3E%3C/svg%3E");
+            opacity: 0.35;
             pointer-events: none;
         }
         .hero-overlay {
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(
-                160deg,
-                rgba(10,10,12,0.92) 0%,
-                rgba(10,10,12,0.75) 50%,
-                rgba(10,10,12,0.9) 100%
-            );
+            position: absolute; inset: 0;
+            background: linear-gradient(160deg, rgba(10,10,12,0.93) 0%, rgba(10,10,12,0.72) 50%, rgba(10,10,12,0.9) 100%);
         }
-        /* Red glow from bottom-left */
         .hero-glow {
-            position: absolute;
-            bottom: -100px;
-            left: -100px;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(220,38,38,0.12) 0%, transparent 70%);
+            position: absolute; bottom: -100px; left: -100px;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(220,38,38,0.1) 0%, transparent 70%);
             pointer-events: none;
         }
+
         .hero-content {
             position: relative;
             z-index: 2;
             text-align: center;
-            max-width: 860px;
+            max-width: 880px;
             padding: 2rem 1.5rem;
         }
         .hero-eyebrow {
             display: inline-flex;
             align-items: center;
             gap: 0.6rem;
-            padding: 0.4rem 1rem;
+            padding: 0.45rem 1.1rem;
             background: rgba(220,38,38,0.1);
             border: 1px solid rgba(220,38,38,0.3);
             border-radius: 2px;
@@ -340,104 +367,161 @@
             border-radius: 50%;
             animation: pulse-dot 1.8s infinite;
         }
-        @keyframes pulse-dot {
-            0%,100% { opacity: 1; transform: scale(1); }
-            50% { opacity: 0.4; transform: scale(1.4); }
-        }
+        @keyframes pulse-dot { 0%,100% { opacity:1; transform:scale(1); } 50% { opacity:0.4; transform:scale(1.4); } }
+
         .hero-title {
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: clamp(3rem, 9vw, 7rem);
+            font-size: clamp(3.2rem, 10vw, 7.5rem);
             font-weight: 900;
-            line-height: 0.95;
+            line-height: 0.92;
             margin-bottom: 1.4rem;
             color: var(--white);
             text-transform: uppercase;
             letter-spacing: -1px;
         }
-        .hero-title .line-red {
-            color: var(--red);
-            display: block;
-        }
-        .hero-text {
-            font-size: clamp(1rem, 2vw, 1.15rem);
+        .hero-title .line-red { color: var(--red); display: block; }
+        .hero-subtitle {
+            font-size: clamp(1.05rem, 2vw, 1.2rem);
             color: var(--steel);
-            margin-bottom: 2.8rem;
-            max-width: 580px;
+            margin-bottom: 1rem;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
             line-height: 1.7;
         }
-        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-        .hero-scroll {
+
+        /* Big phone number in hero */
+        .hero-phone {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            margin: 1.2rem auto 2rem;
+            background: rgba(220,38,38,0.1);
+            border: 1.5px solid rgba(220,38,38,0.35);
+            border-radius: 6px;
+            padding: 0.9rem 2rem;
+        }
+        .hero-phone a {
+            font-size: clamp(1.4rem, 3.5vw, 2rem);
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+        .hero-phone a:hover { color: var(--red); }
+        .hero-phone-icon { font-size: 1.6rem; }
+        .hero-phone-label { font-size: 0.75rem; color: var(--steel); text-transform: uppercase; letter-spacing: 2px; display: block; margin-top: 2px; }
+
+        .hero-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 0; }
+
+        /* Slide dots — ABOVE hero scroll, no collision */
+        .slide-dots {
             position: absolute;
-            bottom: 2.5rem;
+            bottom: 3rem;
             left: 50%;
             transform: translateX(-50%);
-            z-index: 2;
+            z-index: 3;
             display: flex;
-            flex-direction: column;
-            align-items: center;
             gap: 0.5rem;
-            opacity: 0.5;
+            align-items: center;
         }
-        .hero-scroll span {
-            display: block;
-            width: 1px;
-            height: 60px;
-            background: linear-gradient(to bottom, var(--red), transparent);
-            animation: scrollLine 2s ease-in-out infinite;
+        .slide-dot {
+            width: 32px; height: 3px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 2px;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: background 0.3s;
         }
-        .hero-scroll p { font-size: 0.65rem; letter-spacing: 3px; text-transform: uppercase; color: var(--steel); }
-        @keyframes scrollLine { 0%,100% { transform: scaleY(1); } 50% { transform: scaleY(0.5); } }
+        .slide-dot.active { background: rgba(255,255,255,0.15); }
+        .slide-dot::after {
+            content: '';
+            position: absolute;
+            top: 0; left: 0;
+            height: 100%; width: 0;
+            background: var(--red);
+            border-radius: 2px;
+        }
+        .slide-dot.active::after { animation: dot-fill 3.2s linear forwards; }
+        @keyframes dot-fill { 0% { width: 0; } 100% { width: 100%; } }
+
+        /* ===== REVEAL ===== */
+        .reveal { opacity: 0; transform: translateY(36px); transition: opacity 0.75s ease, transform 0.75s ease; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+        .reveal-left { opacity: 0; transform: translateX(-50px); transition: opacity 0.75s ease, transform 0.75s ease; }
+        .reveal-left.active { opacity: 1; transform: translateX(0); }
+        .reveal-right { opacity: 0; transform: translateX(50px); transition: opacity 0.75s ease, transform 0.75s ease; }
+        .reveal-right.active { opacity: 1; transform: translateX(0); }
 
         /* ===== TRUST BAR ===== */
         #trust-bar {
             background: var(--black-mid);
             border-top: 1px solid rgba(220,38,38,0.15);
             border-bottom: 1px solid rgba(220,38,38,0.15);
-            padding: 1.4rem 0;
+            padding: 1.5rem 0;
         }
         .trust-items {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
-            gap: 2rem 3.5rem;
+            gap: 1.5rem 3rem;
         }
         .trust-item {
             display: flex;
             align-items: center;
-            gap: 0.7rem;
-            font-size: 0.88rem;
-            font-weight: 600;
+            gap: 0.65rem;
+            font-size: 0.9rem;
+            font-weight: 700;
             color: var(--steel);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .trust-item .ti-icon { color: var(--red); font-size: 1.15rem; }
+
+        /* ===== PHONE CTA BANNER ===== */
+        #phone-banner {
+            background: var(--red);
+            padding: 2.2rem 0;
+        }
+        .phone-banner-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+        }
+        .phone-banner-text {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        .phone-banner-text strong {
+            display: block;
+            color: #fff;
+            font-family: 'Barlow Condensed', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 900;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-        .trust-item .ti-icon {
-            color: var(--red);
-            font-size: 1.1rem;
+        .phone-banner-number {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 900;
+            color: #fff;
+            letter-spacing: 1px;
         }
+        .phone-banner-number a { color: #fff; transition: opacity 0.2s; }
+        .phone-banner-number a:hover { opacity: 0.85; }
 
         /* ===== O NÁS ===== */
-        #about { padding: var(--section-padding); background: var(--black); }
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 5rem;
-            align-items: center;
-        }
-        .about-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--red);
-            margin-bottom: 1rem;
-        }
+        #about { padding: var(--sp); background: var(--black); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
+        .about-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
         .about-heading {
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: clamp(2rem, 4vw, 3rem);
+            font-size: clamp(2rem, 4vw, 3.2rem);
             font-weight: 900;
             color: var(--white);
             text-transform: uppercase;
@@ -455,514 +539,269 @@
             border-radius: 6px;
             overflow: hidden;
         }
-        .stat-card {
-            padding: 1.8rem 1.5rem;
-            background: var(--black-card);
-            transition: background 0.3s;
-        }
+        .stat-card { padding: 1.8rem 1.5rem; background: var(--black-card); transition: background 0.3s; }
         .stat-card:hover { background: #1a1a22; }
         .stat-number {
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: 2.8rem;
+            font-size: 3rem;
             font-weight: 900;
             color: var(--red);
             line-height: 1;
         }
-        .stat-label { font-size: 0.82rem; color: var(--steel); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.5px; }
-        .about-visual {
-            position: relative;
-        }
-        .about-img-wrap {
-            border-radius: 4px;
-            overflow: hidden;
-            position: relative;
-            background: var(--black-card);
-        }
-        .about-img-wrap img {
-            width: 100%;
-            height: 460px;
-            object-fit: cover;
-            display: block;
-            filter: brightness(0.85) contrast(1.1);
-            transition: transform 0.6s ease;
-        }
+        .stat-label { font-size: 0.85rem; color: var(--steel); margin-top: 0.3rem; text-transform: uppercase; letter-spacing: 0.5px; }
+        .about-visual { position: relative; }
+        .about-img-wrap { border-radius: 4px; overflow: hidden; position: relative; background: var(--black-card); }
+        .about-img-wrap img { width: 100%; height: 460px; object-fit: cover; display: block; filter: brightness(0.85) contrast(1.1); transition: transform 0.6s; }
         .about-img-wrap:hover img { transform: scale(1.04); }
-        .about-img-wrap::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(to top, rgba(10,10,12,0.7) 0%, transparent 50%);
-        }
+        .about-img-wrap::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(10,10,12,0.7) 0%, transparent 50%); }
         .about-badge {
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            right: 0;
+            position: absolute; bottom: 0; left: 0; right: 0;
             z-index: 2;
             display: flex;
             align-items: center;
-            gap: 1rem;
+            gap: 0.8rem;
             padding: 1.2rem 1.5rem;
             background: var(--red);
         }
+        .about-badge img { width: 32px; height: 32px; object-fit: contain; filter: brightness(0) invert(1); }
         .about-badge span { font-size: 0.85rem; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 1px; }
-        /* Red corner accent */
-        .corner-accent {
-            position: absolute;
-            top: -12px;
-            right: -12px;
-            width: 80px;
-            height: 80px;
-            background: var(--red);
-            z-index: -1;
-            border-radius: 2px;
-        }
+        .corner-accent { position: absolute; top: -12px; right: -12px; width: 80px; height: 80px; background: var(--red); z-index: -1; border-radius: 2px; }
 
         /* ===== SLUŽBY ===== */
-        #services {
-            padding: var(--section-padding);
-            background: var(--black-mid);
-            position: relative;
-        }
+        #services { padding: var(--sp); background: var(--black-mid); position: relative; }
         #services::before {
             content: 'DEMOLÁCIE';
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: clamp(6rem, 15vw, 14rem);
+            font-size: clamp(5rem, 14vw, 13rem);
             font-weight: 900;
             color: rgba(220,38,38,0.03);
-            white-space: nowrap;
-            pointer-events: none;
-            letter-spacing: 5px;
-            text-transform: uppercase;
-            user-select: none;
+            white-space: nowrap; pointer-events: none; user-select: none;
         }
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1px;
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.04);
-            border-radius: 6px;
-            overflow: hidden;
-        }
-        .service-card {
-            background: var(--black-card);
-            padding: 2.2rem 2rem;
-            transition: background 0.35s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .service-card::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0;
-            width: 3px;
-            height: 0;
-            background: var(--red);
-            transition: height 0.4s ease;
-        }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.04); border-radius: 6px; overflow: hidden; }
+        .service-card { background: var(--black-card); padding: 2.2rem 2rem; transition: background 0.35s; position: relative; overflow: hidden; }
+        .service-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--red); transition: height 0.4s; }
         .service-card:hover { background: #1a1a22; }
         .service-card:hover::before { height: 100%; }
-        .service-icon {
-            width: 52px; height: 52px;
-            background: var(--red-glow);
-            border: 1px solid rgba(220,38,38,0.2);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.5rem;
-            margin-bottom: 1.3rem;
-            transition: background 0.3s, border-color 0.3s;
-        }
-        .service-card:hover .service-icon {
-            background: var(--red);
-            border-color: var(--red);
-        }
-        .service-card h3 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 800;
-            color: var(--white);
-            margin-bottom: 0.6rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        .service-card p { font-size: 0.9rem; color: var(--steel); line-height: 1.65; }
-
-        /* Featured demolácia card */
-        .service-card.featured {
-            background: rgba(220,38,38,0.06);
-            border-left: 3px solid var(--red);
-        }
+        .service-icon { width: 54px; height: 54px; background: var(--red-glow); border: 1px solid rgba(220,38,38,0.2); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 1.2rem; transition: background 0.3s, border-color 0.3s; }
+        .service-card:hover .service-icon { background: var(--red); border-color: var(--red); }
+        .service-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.3rem; font-weight: 800; color: var(--white); margin-bottom: 0.6rem; text-transform: uppercase; }
+        .service-card p { font-size: 0.95rem; color: var(--steel); line-height: 1.7; }
+        .service-card.featured { background: rgba(220,38,38,0.07); border-left: 3px solid var(--red); }
         .service-card.featured::before { display: none; }
-        .service-card.featured .service-icon {
-            background: var(--red);
-            border-color: var(--red);
-        }
+        .service-card.featured .service-icon { background: var(--red); border-color: var(--red); }
         .service-card.featured h3 { color: var(--red); }
 
-        /* ===== PROCESS ===== */
-        #process {
-            padding: var(--section-padding);
+        /* ===== JAK SA OBJEDNAT (HOW TO BOOK — grandma section) ===== */
+        #how-to-book {
+            padding: var(--sp);
             background: var(--black);
         }
-        .process-steps {
+        .book-steps {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 0;
-            position: relative;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 0;
         }
-        .process-steps::before {
-            content: '';
-            position: absolute;
-            top: 36px;
-            left: calc(12.5%);
-            right: calc(12.5%);
-            height: 1px;
-            background: linear-gradient(90deg, transparent, var(--red), var(--red), var(--red), transparent);
-            opacity: 0.3;
-        }
-        .process-step {
+        .book-step {
+            background: var(--black-card);
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 8px;
+            padding: 2.5rem 2rem;
             text-align: center;
-            padding: 0 1.5rem;
             position: relative;
+            transition: border-color 0.3s, transform 0.3s;
         }
-        .step-num {
-            width: 72px; height: 72px;
-            background: var(--black-card);
-            border: 2px solid rgba(220,38,38,0.3);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
+        .book-step:hover { border-color: rgba(220,38,38,0.3); transform: translateY(-4px); }
+        .book-step-num {
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: 1.8rem;
+            font-size: 5rem;
             font-weight: 900;
-            color: var(--red);
-            position: relative;
-            z-index: 1;
-            transition: all 0.3s ease;
-        }
-        .process-step:hover .step-num {
-            background: var(--red);
-            border-color: var(--red);
-            color: var(--white);
-            box-shadow: 0 0 30px rgba(220,38,38,0.4);
-        }
-        .process-step h3 {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 1.15rem;
-            font-weight: 800;
-            color: var(--white);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 0.5rem;
-        }
-        .process-step p { font-size: 0.88rem; color: var(--steel); line-height: 1.6; }
-
-        /* ===== PREČO MY ===== */
-        #why { padding: var(--section-padding); background: var(--black-mid); }
-        .why-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-        }
-        .why-card {
-            padding: 2.2rem 1.5rem;
-            background: var(--black-card);
-            border: 1px solid rgba(255,255,255,0.04);
-            border-radius: 6px;
-            transition: all 0.35s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        .why-card::after {
-            content: '';
+            color: rgba(220,38,38,0.12);
+            line-height: 1;
             position: absolute;
-            bottom: 0; left: 0; right: 0;
-            height: 2px;
-            background: var(--red);
-            transform: scaleX(0);
-            transition: transform 0.35s ease;
+            top: 1rem; right: 1.5rem;
         }
-        .why-card:hover {
-            transform: translateY(-4px);
-            border-color: rgba(220,38,38,0.2);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.4);
-        }
-        .why-card:hover::after { transform: scaleX(1); }
-        .why-icon {
-            font-size: 2rem;
+        .book-step-icon {
+            font-size: 3rem;
             margin-bottom: 1rem;
+            display: block;
         }
-        .why-card h3 {
+        .book-step h3 {
             font-family: 'Barlow Condensed', sans-serif;
-            font-size: 1.15rem;
-            font-weight: 800;
-            color: var(--white);
-            margin-bottom: 0.5rem;
-            text-transform: uppercase;
-        }
-        .why-card p { font-size: 0.88rem; color: var(--steel); line-height: 1.65; }
-
-        /* ===== GALÉRIA ===== */
-        #gallery {
-            padding: var(--section-padding);
-            background: var(--black);
-        }
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 6px;
-        }
-        .gallery-item {
-            border-radius: 3px;
-            overflow: hidden;
-            position: relative;
-            aspect-ratio: 4/3;
-            cursor: pointer;
-            background: var(--black-card);
-        }
-        .gallery-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-            filter: brightness(0.85) contrast(1.05);
-        }
-        .gallery-item:hover img { transform: scale(1.08); filter: brightness(1) contrast(1.05); }
-        .gallery-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(220,38,38,0.7);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-        .gallery-overlay span { color: #fff; font-size: 1.8rem; font-weight: 900; }
-        .gallery-item:hover .gallery-overlay { opacity: 1; }
-
-        /* Lightbox */
-        .lightbox {
-            position: fixed;
-            inset: 0;
-            background: rgba(0,0,0,0.96);
-            z-index: 2000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            pointer-events: none;
-            transition: opacity 0.3s ease;
-        }
-        .lightbox.open { opacity: 1; pointer-events: all; }
-        .lightbox img {
-            max-width: 90%;
-            max-height: 85vh;
-            border-radius: 3px;
-            object-fit: contain;
-        }
-        .lightbox-close {
-            position: absolute;
-            top: 1.5rem; right: 1.5rem;
-            width: 44px; height: 44px;
-            background: var(--red);
-            border: none;
-            border-radius: 3px;
-            color: var(--white);
-            font-size: 1.3rem;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.3s;
-        }
-        .lightbox-close:hover { background: var(--red-dark); }
-        .lightbox-nav {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 48px; height: 48px;
-            background: rgba(255,255,255,0.08);
-            border: 1px solid rgba(255,255,255,0.1);
-            border-radius: 3px;
-            color: var(--white);
             font-size: 1.5rem;
-            cursor: pointer;
-            transition: background 0.3s;
-        }
-        .lightbox-nav:hover { background: var(--red); border-color: var(--red); }
-        .lightbox-prev { left: 1.5rem; }
-        .lightbox-next { right: 1.5rem; }
-
-        /* ===== KONTAKT ===== */
-        #contact { padding: var(--section-padding); background: var(--black-mid); }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1.4fr;
-            gap: 3.5rem;
-        }
-        .contact-label {
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 3px;
-            text-transform: uppercase;
-            color: var(--red);
-            margin-bottom: 1rem;
-        }
-        .contact-heading {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: clamp(1.8rem, 3vw, 2.6rem);
             font-weight: 900;
             color: var(--white);
             text-transform: uppercase;
             margin-bottom: 0.8rem;
         }
-        .contact-desc { color: var(--steel); font-size: 0.95rem; margin-bottom: 2rem; line-height: 1.8; }
+        .book-step p {
+            font-size: 1rem;
+            color: var(--steel);
+            line-height: 1.7;
+        }
+        .book-step-cta {
+            margin-top: 1.2rem;
+            display: inline-block;
+        }
+        .book-highlight {
+            background: rgba(220,38,38,0.06);
+            border-color: rgba(220,38,38,0.3);
+        }
+        .book-highlight .book-step-num { color: rgba(220,38,38,0.2); }
+
+        /* ===== POSTUP ===== */
+        #process { padding: var(--sp); background: var(--black-mid); }
+        .process-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; position: relative; }
+        .process-steps::before { content: ''; position: absolute; top: 36px; left: 12.5%; right: 12.5%; height: 1px; background: linear-gradient(90deg, transparent, var(--red), transparent); opacity: 0.25; }
+        .process-step { text-align: center; padding: 0 1.5rem; }
+        .step-num { width: 72px; height: 72px; background: var(--black-card); border: 2px solid rgba(220,38,38,0.3); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-family: 'Barlow Condensed', sans-serif; font-size: 1.8rem; font-weight: 900; color: var(--red); position: relative; z-index: 1; transition: all 0.3s; }
+        .process-step:hover .step-num { background: var(--red); border-color: var(--red); color: var(--white); box-shadow: 0 0 30px rgba(220,38,38,0.4); }
+        .process-step h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--white); text-transform: uppercase; margin-bottom: 0.5rem; }
+        .process-step p { font-size: 0.95rem; color: var(--steel); line-height: 1.65; }
+
+        /* ===== PREČO MY ===== */
+        #why { padding: var(--sp); background: var(--black); }
+        .why-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+        .why-card { padding: 2.2rem 1.5rem; background: var(--black-card); border: 1px solid rgba(255,255,255,0.04); border-radius: 6px; transition: all 0.35s; position: relative; overflow: hidden; }
+        .why-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--red); transform: scaleX(0); transition: transform 0.35s; }
+        .why-card:hover { transform: translateY(-4px); border-color: rgba(220,38,38,0.2); box-shadow: 0 12px 40px rgba(0,0,0,0.4); }
+        .why-card:hover::after { transform: scaleX(1); }
+        .why-icon { font-size: 2.2rem; margin-bottom: 1rem; }
+        .why-card h3 { font-family: 'Barlow Condensed', sans-serif; font-size: 1.2rem; font-weight: 800; color: var(--white); margin-bottom: 0.5rem; text-transform: uppercase; }
+        .why-card p { font-size: 0.95rem; color: var(--steel); line-height: 1.7; }
+
+        /* ===== GALÉRIA ===== */
+        #gallery { padding: var(--sp); background: var(--black-mid); }
+        .gallery-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
+        .gallery-item { border-radius: 3px; overflow: hidden; position: relative; aspect-ratio: 4/3; cursor: pointer; background: var(--black-card); }
+        .gallery-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s; filter: brightness(0.85) contrast(1.05); }
+        .gallery-item:hover img { transform: scale(1.08); filter: brightness(1) contrast(1.05); }
+        .gallery-overlay { position: absolute; inset: 0; background: rgba(220,38,38,0.7); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s; }
+        .gallery-overlay span { color: #fff; font-size: 2rem; font-weight: 900; }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+
+        /* Lightbox */
+        .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.96); z-index: 2000; display: flex; align-items: center; justify-content: center; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+        .lightbox.open { opacity: 1; pointer-events: all; }
+        .lightbox img { max-width: 90%; max-height: 85vh; border-radius: 3px; object-fit: contain; }
+        .lightbox-close { position: absolute; top: 1.5rem; right: 1.5rem; width: 48px; height: 48px; background: var(--red); border: none; border-radius: 3px; color: var(--white); font-size: 1.4rem; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .lightbox-close:hover { background: var(--red-dark); }
+        .lightbox-nav { position: absolute; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.1); border-radius: 3px; color: var(--white); font-size: 1.6rem; cursor: pointer; transition: background 0.3s; }
+        .lightbox-nav:hover { background: var(--red); border-color: var(--red); }
+        .lightbox-prev { left: 1.5rem; }
+        .lightbox-next { right: 1.5rem; }
+
+        /* ===== KONTAKT ===== */
+        #contact { padding: var(--sp); background: var(--black); }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3.5rem; }
+        .contact-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: var(--red); margin-bottom: 1rem; }
+        .contact-heading { font-family: 'Barlow Condensed', sans-serif; font-size: clamp(1.8rem, 3vw, 2.8rem); font-weight: 900; color: var(--white); text-transform: uppercase; margin-bottom: 0.8rem; }
+        .contact-desc { color: var(--steel); font-size: 1rem; margin-bottom: 2rem; line-height: 1.8; }
         .contact-info { display: flex; flex-direction: column; gap: 1rem; }
-        .contact-item {
-            display: flex;
-            align-items: flex-start;
-            gap: 1rem;
-            padding: 1.2rem;
-            background: var(--black-card);
-            border: 1px solid rgba(255,255,255,0.04);
-            border-radius: 4px;
-            transition: border-color 0.3s;
-        }
+        .contact-item { display: flex; align-items: flex-start; gap: 1rem; padding: 1.2rem; background: var(--black-card); border: 1px solid rgba(255,255,255,0.04); border-radius: 4px; transition: border-color 0.3s; }
         .contact-item:hover { border-color: rgba(220,38,38,0.25); }
-        .contact-icon {
-            width: 44px; height: 44px;
-            background: var(--red-glow);
-            border: 1px solid rgba(220,38,38,0.2);
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.2rem;
-            flex-shrink: 0;
-        }
-        .contact-item h4 { font-size: 0.8rem; font-weight: 700; color: var(--steel); margin-bottom: 0.2rem; text-transform: uppercase; letter-spacing: 1px; }
-        .contact-item p { font-size: 0.95rem; color: var(--white); font-weight: 500; }
+        .contact-icon { width: 48px; height: 48px; background: var(--red-glow); border: 1px solid rgba(220,38,38,0.2); border-radius: 4px; display: flex; align-items: center; justify-content: center; font-size: 1.3rem; flex-shrink: 0; }
+        .contact-item h4 { font-size: 0.82rem; font-weight: 700; color: var(--steel); margin-bottom: 0.25rem; text-transform: uppercase; letter-spacing: 1px; }
+        .contact-item p { font-size: 1rem; color: var(--white); font-weight: 600; }
         .contact-item a { color: var(--red); transition: color 0.3s; }
         .contact-item a:hover { color: #ef4444; }
-        .contact-form {
-            background: var(--black-card);
-            padding: 2.5rem;
-            border-radius: 6px;
-            border: 1px solid rgba(255,255,255,0.04);
-        }
-        .contact-form-title {
-            font-family: 'Barlow Condensed', sans-serif;
+        .contact-phone-big a {
             font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--white);
-            text-transform: uppercase;
-            margin-bottom: 1.5rem;
+            font-weight: 900;
+            color: var(--red) !important;
         }
-        .form-group { margin-bottom: 1.1rem; }
-        .form-group label {
-            display: block;
-            font-size: 0.78rem;
-            font-weight: 700;
-            color: var(--steel-dim);
-            margin-bottom: 0.4rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+
+        /* FORM */
+        .contact-form { background: var(--black-card); padding: 2.5rem; border-radius: 6px; border: 1px solid rgba(255,255,255,0.04); }
+        .contact-form-title { font-family: 'Barlow Condensed', sans-serif; font-size: 1.6rem; font-weight: 900; color: var(--white); text-transform: uppercase; margin-bottom: 0.4rem; }
+        .contact-form-hint { font-size: 0.92rem; color: var(--steel); margin-bottom: 1.8rem; }
+        .form-group { margin-bottom: 1.2rem; }
+        .form-group label { display: block; font-size: 0.9rem; font-weight: 700; color: var(--steel); margin-bottom: 0.5rem; }
         .form-group input,
         .form-group textarea,
         .form-group select {
-            width: 100%;
-            padding: 0.85rem 1rem;
+            width: 100%; padding: 1rem 1.1rem;
             background: var(--black);
-            border: 1px solid rgba(255,255,255,0.07);
+            border: 1.5px solid rgba(255,255,255,0.08);
             border-radius: 4px;
             color: var(--white);
             font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
+            font-size: 1rem;
             transition: border-color 0.3s;
         }
         .form-group input:focus,
         .form-group textarea:focus,
-        .form-group select:focus {
-            outline: none;
-            border-color: var(--red);
-            box-shadow: 0 0 0 3px rgba(220,38,38,0.1);
-        }
+        .form-group select:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(220,38,38,0.1); }
         .form-group select option { background: var(--black-card); }
         .form-group textarea { resize: vertical; min-height: 120px; }
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-        .form-submit { margin-top: 0.5rem; width: 100%; justify-content: center; }
+        .form-submit { margin-top: 0.8rem; width: 100%; justify-content: center; padding: 1.2rem; font-size: 1.05rem; }
 
-        .map-wrapper {
-            margin-top: 4rem;
-            border-radius: 6px;
-            overflow: hidden;
-            border: 1px solid rgba(255,255,255,0.04);
-        }
-        .map-wrapper iframe {
-            width: 100%;
-            height: 320px;
-            border: none;
-            filter: brightness(0.75) contrast(1.2) saturate(0.5) hue-rotate(180deg);
-        }
-
-        /* ===== FOOTER ===== */
-        footer {
-            background: var(--black);
-            border-top: 1px solid rgba(255,255,255,0.04);
-            padding: 2.5rem 0;
-        }
-        .footer-content {
+        /* CAPTCHA */
+        .captcha-box {
             display: flex;
             align-items: center;
-            justify-content: space-between;
-            flex-wrap: wrap;
             gap: 1rem;
+            padding: 1rem 1.2rem;
+            background: var(--black);
+            border: 1.5px solid rgba(255,255,255,0.08);
+            border-radius: 4px;
+            margin-bottom: 1.2rem;
+            transition: border-color 0.3s;
+            cursor: pointer;
         }
-        .footer-logo {
-            font-family: 'Barlow Condensed', sans-serif;
-            font-size: 1.3rem;
-            font-weight: 900;
-            color: var(--white);
-            letter-spacing: 2px;
+        .captcha-box:hover { border-color: rgba(220,38,38,0.35); }
+        .captcha-checkbox {
+            width: 26px; height: 26px;
+            border: 2px solid rgba(255,255,255,0.25);
+            border-radius: 5px;
+            background: var(--black-card);
+            cursor: pointer;
+            flex-shrink: 0;
+            appearance: none;
+            -webkit-appearance: none;
+            position: relative;
+            transition: border-color 0.3s, background 0.3s;
         }
-        .footer-logo span { color: var(--red); }
+        .captcha-checkbox:checked { background: var(--red); border-color: var(--red); }
+        .captcha-checkbox:checked::after { content: ''; position: absolute; top: 3px; left: 8px; width: 6px; height: 11px; border: 2.5px solid #fff; border-top: none; border-left: none; transform: rotate(45deg); }
+        .captcha-label { font-size: 1rem; font-weight: 600; color: var(--steel); cursor: pointer; user-select: none; flex: 1; }
+        .captcha-icon { font-size: 1.4rem; }
+        .captcha-box.verified { border-color: rgba(34,197,94,0.4); }
+        .captcha-box.verified .captcha-label { color: #86efac; }
+
+        /* Map */
+        .map-wrapper { margin-top: 4rem; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.04); }
+        .map-wrapper iframe { width: 100%; height: 320px; border: none; filter: brightness(0.75) contrast(1.2) saturate(0.5) hue-rotate(180deg); }
+
+        /* ===== FOOTER ===== */
+        footer { background: var(--black-mid); border-top: 1px solid rgba(255,255,255,0.04); padding: 3rem 0 2rem; }
+        .footer-main {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 3rem;
+            margin-bottom: 2.5rem;
+        }
+        .footer-brand { display: flex; flex-direction: column; }
+        .footer-logo { display: flex; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+        .footer-logo img { width: 48px; height: 48px; object-fit: contain; }
+        .footer-logo-name { font-family: 'Barlow Condensed', sans-serif; font-size: 1.5rem; font-weight: 900; color: var(--white); letter-spacing: 2px; }
+        .footer-logo-name span { color: var(--red); }
+        .footer-desc { font-size: 0.9rem; color: var(--steel); line-height: 1.7; }
+        .footer-col h4 { font-family: 'Barlow Condensed', sans-serif; font-size: 1rem; font-weight: 800; color: var(--white); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
+        .footer-col ul li { margin-bottom: 0.6rem; }
+        .footer-col ul a { font-size: 0.9rem; color: var(--steel); transition: color 0.3s; }
+        .footer-col ul a:hover { color: var(--red); }
+        .footer-col .footer-phone { font-size: 1.3rem; font-weight: 900; color: var(--red); display: block; margin-bottom: 0.4rem; }
+        .footer-col .footer-hours { font-size: 0.85rem; color: var(--steel); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.04); padding-top: 1.5rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
         .footer-copy { font-size: 0.82rem; color: var(--steel-dim); }
-        .footer-links { display: flex; gap: 1.5rem; }
-        .footer-links a { color: var(--steel-dim); font-size: 0.82rem; transition: color 0.3s; }
-        .footer-links a:hover { color: var(--red); }
 
         /* ===== BACK TO TOP ===== */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            width: 46px;
-            height: 46px;
-            background: var(--red);
-            border: none;
-            border-radius: 3px;
-            color: var(--white);
-            font-size: 1.2rem;
-            cursor: pointer;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.3s ease;
-            z-index: 100;
-            box-shadow: 0 4px 20px rgba(220,38,38,0.4);
-        }
+        .back-to-top { position: fixed; bottom: 2rem; left: 2rem; width: 46px; height: 46px; background: var(--black-card); border: 1px solid rgba(255,255,255,0.1); border-radius: 3px; color: var(--white); font-size: 1.2rem; cursor: pointer; opacity: 0; transform: translateY(20px); transition: all 0.3s; z-index: 100; }
         .back-to-top.visible { opacity: 1; transform: translateY(0); }
-        .back-to-top:hover { background: var(--red-dark); transform: translateY(-3px); }
+        .back-to-top:hover { background: var(--red); border-color: var(--red); transform: translateY(-3px); }
 
         /* ===== RESPONSIVE ===== */
         @media (max-width: 1024px) {
@@ -971,9 +810,12 @@
             .gallery-grid { grid-template-columns: repeat(2, 1fr); }
             .process-steps { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
             .process-steps::before { display: none; }
+            .book-steps { grid-template-columns: repeat(3, 1fr); }
+            .footer-main { grid-template-columns: 1fr 1fr; }
         }
         @media (max-width: 768px) {
-            :root { --section-padding: 4.5rem 1rem; }
+            html { font-size: 17px; }
+            :root { --sp: 4.5rem 1.2rem; }
             .nav-links { display: none; }
             .hamburger { display: flex; }
             .about-grid { grid-template-columns: 1fr; gap: 3rem; }
@@ -986,40 +828,49 @@
             .contact-grid { grid-template-columns: 1fr; }
             .form-row { grid-template-columns: 1fr; }
             .hero-buttons { flex-direction: column; align-items: center; }
-            .footer-content { flex-direction: column; text-align: center; }
-            .trust-items { gap: 1.2rem 2rem; }
+            .phone-banner-inner { gap: 1.5rem; text-align: center; flex-direction: column; }
+            .book-steps { grid-template-columns: 1fr; }
+            .footer-main { grid-template-columns: 1fr; gap: 2rem; }
+            .footer-bottom { flex-direction: column; text-align: center; }
         }
         @media (max-width: 480px) {
             .why-grid { grid-template-columns: 1fr; }
             .gallery-grid { grid-template-columns: 1fr; }
             .process-steps { grid-template-columns: 1fr; }
-            .about-stats { grid-template-columns: 1fr 1fr; }
             .contact-form { padding: 1.5rem; }
+            .float-call { bottom: 1rem; right: 1rem; padding: 0.8rem 1.2rem; font-size: 0.88rem; }
         }
     </style>
 </head>
 <body>
 
-<!-- Scroll Progress -->
 <div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Floating call button -->
+<a href="tel:+421900000000" class="float-call">
+    <span class="fc-icon">📞</span>
+    Zavolajte nám
+</a>
+
+<!-- Back to top -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <!-- Header -->
 <header id="header">
     <div class="nav-container">
         <a href="#hero" class="logo">
-            <div class="logo-mark">D</div>
-            <div class="logo-text">
-                DRAVIO
-                <span class="logo-sub">s.r.o.</span>
+            <img src="images/logo.svg" alt="DRAVIO logo" class="logo-img">
+            <div class="logo-text-wrap">
+                <span class="logo-name">DRAVIO</span>
+                <span class="logo-tagline">Demoličné práce</span>
             </div>
         </a>
         <nav class="nav-links">
             <a href="#about">O firme</a>
             <a href="#services">Služby</a>
-            <a href="#process">Postup</a>
-            <a href="#why">Prečo my</a>
+            <a href="#how-to-book">Ako sa objednať</a>
             <a href="#gallery">Realizácie</a>
-            <a href="#contact">Kontakt</a>
+            <a href="#contact" class="nav-cta">Kontakt</a>
         </nav>
         <div class="hamburger" id="hamburger">
             <span></span><span></span><span></span>
@@ -1029,38 +880,61 @@
 
 <!-- Mobile Nav -->
 <div class="mobile-nav" id="mobileNav">
+    <div class="mobile-logo">
+        <img src="images/logo.svg" alt="DRAVIO logo">
+        <span style="font-family:'Barlow Condensed',sans-serif; font-size:1.8rem; font-weight:900; color:#fff; letter-spacing:2px;">DRAVIO</span>
+    </div>
     <a href="#about" onclick="closeMenu()">O firme</a>
     <a href="#services" onclick="closeMenu()">Služby</a>
-    <a href="#process" onclick="closeMenu()">Postup</a>
-    <a href="#why" onclick="closeMenu()">Prečo my</a>
+    <a href="#how-to-book" onclick="closeMenu()">Ako sa objednať</a>
     <a href="#gallery" onclick="closeMenu()">Realizácie</a>
     <a href="#contact" onclick="closeMenu()">Kontakt</a>
+    <a href="tel:+421900000000" class="mobile-call">📞 +421 900 000 000</a>
 </div>
 
-<!-- Hero -->
+<!-- HERO -->
 <section id="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-bg">
+        <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1600&q=80')"></div>
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?w=1600&q=80')"></div>
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1581092580497-e0d23cbfcacb?w=1600&q=80')"></div>
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1542621334-a254cf47733d?w=1600&q=80')"></div>
+        <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1600&q=80')"></div>
+    </div>
     <div class="hero-grain"></div>
     <div class="hero-overlay"></div>
     <div class="hero-glow"></div>
+
     <div class="hero-content">
         <div class="hero-eyebrow">Rajecká dolina &amp; okolie</div>
         <h1 class="hero-title">
             Demoličné<br>
             <span class="line-red">práce</span>
         </h1>
-        <p class="hero-text">
-            Profesionálne búracie a demoličné práce, zemné práce a odvoz sutiny v celej Rajeckej doline.
-            Moderná technika, skúsený tím — nonstop dostupnosť.
+        <p class="hero-subtitle">
+            Profesionálne búracie a demoličné práce pre domy, firmy aj priemysel.<br>
+            Moderná technika — rýchlo, bezpečne, spoľahlivo.
         </p>
+        <div class="hero-phone">
+            <span class="hero-phone-icon">📞</span>
+            <div>
+                <a href="tel:+421900000000">+421 900 000 000</a>
+                <span class="hero-phone-label">Nonstop — zavolajte kedykoľvek</span>
+            </div>
+        </div>
         <div class="hero-buttons">
-            <a href="#contact" class="btn">Cenová ponuka zadarmo</a>
-            <a href="#services" class="btn btn-outline">Naše služby</a>
+            <a href="#contact" class="btn btn-lg">Získať cenovú ponuku</a>
+            <a href="#how-to-book" class="btn btn-outline btn-lg">Ako to funguje?</a>
         </div>
     </div>
-    <div class="hero-scroll">
-        <p>Scroll</p>
-        <span></span>
+
+    <!-- Slide dots — bottom, no collision with scroll text -->
+    <div class="slide-dots" id="slideDots">
+        <div class="slide-dot active" onclick="goToSlide(0)"></div>
+        <div class="slide-dot" onclick="goToSlide(1)"></div>
+        <div class="slide-dot" onclick="goToSlide(2)"></div>
+        <div class="slide-dot" onclick="goToSlide(3)"></div>
+        <div class="slide-dot" onclick="goToSlide(4)"></div>
     </div>
 </section>
 
@@ -1068,11 +942,29 @@
 <div id="trust-bar">
     <div class="container">
         <div class="trust-items">
-            <div class="trust-item"><span class="ti-icon">⚡</span> Nonstop dostupnosť 24/7</div>
-            <div class="trust-item"><span class="ti-icon">🏗️</span> Moderná demolačná technika</div>
-            <div class="trust-item"><span class="ti-icon">✅</span> Licencovaná firma</div>
-            <div class="trust-item"><span class="ti-icon">📍</span> Rajecká dolina a okolie</div>
+            <div class="trust-item"><span class="ti-icon">⚡</span> Nonstop dostupnosť</div>
+            <div class="trust-item"><span class="ti-icon">🏗️</span> Moderná technika</div>
+            <div class="trust-item"><span class="ti-icon">✅</span> Skúsená firma</div>
+            <div class="trust-item"><span class="ti-icon">📍</span> Rajecká dolina</div>
             <div class="trust-item"><span class="ti-icon">🤝</span> Bezplatná obhliadka</div>
+        </div>
+    </div>
+</div>
+
+<!-- Phone Banner -->
+<div id="phone-banner">
+    <div class="container">
+        <div class="phone-banner-inner">
+            <div class="phone-banner-text">
+                <strong>Potrebujete poradiť? Zavolajte nám!</strong>
+                Odpovieme okamžite — nonstop, 24 hodín denne, 7 dní v týždni.
+            </div>
+            <div class="phone-banner-number">
+                <a href="tel:+421900000000">+421 900 000 000</a>
+            </div>
+            <a href="tel:+421900000000" class="btn btn-phone" style="background:#fff; color:#dc2626;">
+                📞 Zavolať teraz
+            </a>
         </div>
     </div>
 </div>
@@ -1085,38 +977,58 @@
                 <div class="about-label">O spoločnosti</div>
                 <h2 class="about-heading">Demolácie<br><span class="accent">robíme naplno</span></h2>
                 <p class="about-text">
-                    <strong style="color:#fff;">DRAVIO s.r.o.</strong> je demolačná firma pôsobiaca v celej <strong style="color:#fff;">Rajeckej doline</strong> — Rajec, Rajecké Teplice, Fačkov, Čičmany a okolie. Špecializujeme sa na búracie a demoličné práce všetkých rozsahov.
+                    <strong style="color:#fff;">DRAVIO s.r.o.</strong> je demolačná firma pôsobiaca v celej <strong style="color:#fff;">Rajeckej doline</strong> — Rajec, Rajecké Teplice, Fačkov, Čičmany a okolie.
                 </p>
                 <p class="about-text">
-                    Disponujeme modernou demolačnou technikou — hydraulické búracie kladivá, bagre, minibagre a ťažkotonážne stroje. Každú zákazku riešime rýchlo, bezpečne a s maximálnym ohľadom na okolie. Sme tu <strong style="color: var(--red);">nonstop</strong>.
+                    Disponujeme modernou demolačnou technikou — hydraulické búracie kladivá, bagre, minibagre. Každú zákazku riešime rýchlo, bezpečne a s ohľadom na okolie. Sme tu pre vás <strong style="color: var(--red);">nonstop, 24 hodín</strong>.
                 </p>
                 <div class="about-stats">
-                    <div class="stat-card">
-                        <div class="stat-number" data-count="10">0</div>
-                        <div class="stat-label">Rokov skúseností</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-count="300">0</div>
-                        <div class="stat-label">Demolácií dokončených</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-count="24">0</div>
-                        <div class="stat-label">Hodinová dostupnosť</div>
-                    </div>
-                    <div class="stat-card">
-                        <div class="stat-number" data-count="100">0</div>
-                        <div class="stat-label">% spokojných klientov</div>
-                    </div>
+                    <div class="stat-card"><div class="stat-number" data-count="10">0</div><div class="stat-label">Rokov skúseností</div></div>
+                    <div class="stat-card"><div class="stat-number" data-count="300">0</div><div class="stat-label">Dokončených demolácií</div></div>
+                    <div class="stat-card"><div class="stat-number" data-count="24">0</div><div class="stat-label">Hodín dostupnosť</div></div>
+                    <div class="stat-card"><div class="stat-number" data-count="100">0</div><div class="stat-label">% spokojných klientov</div></div>
                 </div>
             </div>
             <div class="about-visual reveal-right">
                 <div class="corner-accent"></div>
                 <div class="about-img-wrap">
-                    <img src="images/gallery1.png" alt="Demoličné práce DRAVIO s.r.o. – Rajecká dolina" loading="lazy">
+                    <img src="images/gallery1.png" alt="Demoličné práce DRAVIO – Rajecká dolina" loading="lazy">
                     <div class="about-badge">
-                        <span>🔴 DRAVIO s.r.o. — Demoličné práce, Rajecká dolina</span>
+                        <img src="images/logo.svg" alt="DRAVIO logo">
+                        <span>DRAVIO s.r.o. — Demoličné práce</span>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ako sa objednať -->
+<section id="how-to-book">
+    <div class="container">
+        <h2 class="section-title reveal">Ako sa <span class="accent">objednať?</span></h2>
+        <p class="section-subtitle reveal">Jednoducho — zavolajte, prídeme k vám a všetko spolu dohovoríme. Žiadna byrokracia, žiadne zálohy vopred.</p>
+        <div class="book-steps">
+            <div class="book-step book-highlight reveal">
+                <span class="book-step-num">1</span>
+                <span class="book-step-icon">📞</span>
+                <h3>Zavolajte nám</h3>
+                <p>Stačí zavolať na číslo nižšie. Opíšte nám, čo potrebujete — zaobstaráme zvyšok.</p>
+                <a href="tel:+421900000000" class="btn book-step-cta">
+                    +421 900 000 000
+                </a>
+            </div>
+            <div class="book-step reveal">
+                <span class="book-step-num">2</span>
+                <span class="book-step-icon">🏠</span>
+                <h3>Prídeme k vám</h3>
+                <p>Náš odborník príde na miesto, prezrie situáciu a pripraví cenovú ponuku. Zadarmo, bez záväzkov.</p>
+            </div>
+            <div class="book-step reveal">
+                <span class="book-step-num">3</span>
+                <span class="book-step-icon">✅</span>
+                <h3>Práca hotová</h3>
+                <p>V dohodnutý termín nastúpime s technikou a prácu dokončíme. Odovzdáme vám čistú parcelu.</p>
             </div>
         </div>
     </div>
@@ -1126,67 +1038,67 @@
 <section id="services">
     <div class="container">
         <h2 class="section-title reveal">Naše <span class="accent">služby</span></h2>
-        <p class="section-subtitle reveal">Kompletné demolačné a búracie práce pre súkromné aj firemné projekty v Rajeckej doline.</p>
+        <p class="section-subtitle reveal">Všetko čo potrebujete pre demoláciu — od búrania až po odvoz sutiny. Jedna firma, jeden hovor.</p>
         <div class="services-grid">
             <div class="service-card featured reveal">
                 <div class="service-icon">💥</div>
                 <h3>Demoličné práce</h3>
-                <p>Búranie stavieb všetkých typov — rodinné domy, priemyselné haly, prístavby, komíny. Bezpečné a kontrolované demolácie s minimálnym vplyvom na okolie.</p>
+                <p>Búranie stavieb všetkých typov — rodinné domy, priemyselné haly, prístavby, komíny. Bezpečne a kontrolovane.</p>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon">🧱</div>
                 <h3>Búracie práce</h3>
-                <p>Búranie vnútorných a nosných prvkov, priečok, stropov, schodísk. Presné búranie bez poškodenia zostávajúcich konštrukcií.</p>
+                <p>Búranie vnútorných konštrukcií, priečok, stropov, schodísk. Presné búranie bez poškodenia zvyšku.</p>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon">♻️</div>
                 <h3>Odvoz sutiny</h3>
-                <p>Kompletný odvoz a ekologická likvidácia demolačného odpadu a sutiny. Triedenie materiálov, zákonné nakladanie s odpadmi.</p>
+                <p>Kompletný odvoz a ekologická likvidácia demolačného odpadu. Zákonné nakladanie s odpadmi.</p>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon">⛏️</div>
                 <h3>Zemné práce</h3>
-                <p>Výkopy základov, terénne úpravy, odstraňovanie základových dosiek a betónových konštrukcií po demolácii.</p>
+                <p>Výkopy základov, terénne úpravy, odstraňovanie betónových konštrukcií po demolácii.</p>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon">🚛</div>
                 <h3>Nákladná doprava</h3>
-                <p>Preprava demolačného materiálu, sutiny a zeminy sklápačmi. Spoľahlivá logistika pre celý región Rajeckej doliny.</p>
+                <p>Preprava demolačného materiálu sklápačmi. Spoľahlivá logistika pre celú Rajeckú dolinu.</p>
             </div>
             <div class="service-card reveal">
                 <div class="service-icon">📋</div>
-                <h3>Poradenstvo a projekty</h3>
-                <p>Bezplatná obhliadka a konzultácia. Pomôžeme s povoleniami, vypracujeme postup demolácie a cenovu ponuku na mieru.</p>
+                <h3>Poradenstvo</h3>
+                <p>Bezplatná obhliadka a konzultácia. Pomôžeme s povoleniami a vypracujeme postup demolácie.</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Postup práce -->
+<!-- Postup -->
 <section id="process">
     <div class="container">
-        <h2 class="section-title reveal">Ako <span class="accent">postupujeme?</span></h2>
-        <p class="section-subtitle reveal">Od prvého kontaktu po čistú parcelu — jednoduchý a transparentný proces.</p>
+        <h2 class="section-title reveal">Náš <span class="accent">postup</span></h2>
+        <p class="section-subtitle reveal">Od prvého telefonátu po čistú parcelu — transparentne a bez prekvapení.</p>
         <div class="process-steps">
             <div class="process-step reveal">
                 <div class="step-num">01</div>
                 <h3>Kontakt</h3>
-                <p>Zavoláte alebo napíšete. Dohodne sa bezplatná obhliadka na mieste.</p>
+                <p>Zavoláte alebo napíšete. Dohodne sa bezplatná obhliadka.</p>
             </div>
             <div class="process-step reveal">
                 <div class="step-num">02</div>
                 <h3>Obhliadka</h3>
-                <p>Posúdime stav objektu, navrhneme postup a vypracujeme cenovú ponuku.</p>
+                <p>Posúdime stav objektu a vypracujeme presnú cenovú ponuku.</p>
             </div>
             <div class="process-step reveal">
                 <div class="step-num">03</div>
                 <h3>Realizácia</h3>
-                <p>Nastúpime s technikou v dohodnutý termín a demoláciu dokončíme rýchlo a bezpečne.</p>
+                <p>Nastúpime s technikou v dohodnutý termín a prácu dokončíme rýchlo.</p>
             </div>
             <div class="process-step reveal">
                 <div class="step-num">04</div>
-                <h3>Čistá parcela</h3>
-                <p>Odstraníme všetku sutinu, vyrovnáme terén a odovzdáme vám čistú stavenisku.</p>
+                <h3>Odovzdanie</h3>
+                <p>Odstraníme sutinu, vyrovnáme terén — odovzdáme čistú parcelu.</p>
             </div>
         </div>
     </div>
@@ -1196,17 +1108,17 @@
 <section id="why">
     <div class="container">
         <h2 class="section-title reveal">Prečo <span class="accent">DRAVIO?</span></h2>
-        <p class="section-subtitle reveal">Výber správnej demolačnej firmy sa nerobí len podľa ceny.</p>
+        <p class="section-subtitle reveal">Výber správnej demolačnej firmy je dôležitý. Tu je dôvod, prečo nás klienti odporúčajú ďalej.</p>
         <div class="why-grid">
             <div class="why-card reveal">
                 <div class="why-icon">⚡</div>
                 <h3>Nonstop 24/7</h3>
-                <p>Dostupní kedykoľvek — reagujeme na urgentné situácie, havárie a núdzové búrania okamžite, aj cez víkendy.</p>
+                <p>Dostupní kedykoľvek — aj cez víkend a sviatky. Urgentné situácie riešime okamžite.</p>
             </div>
             <div class="why-card reveal">
                 <div class="why-icon">🦺</div>
                 <h3>Bezpečnosť</h3>
-                <p>Každá demolácia prebieha podľa prísnych bezpečnostných noriem. Ochrana okolia, chodcov a majetku je pre nás priorita.</p>
+                <p>Každá demolácia prebieha podľa bezpečnostných noriem. Ochrana okolia a majetku je priorita.</p>
             </div>
             <div class="why-card reveal">
                 <div class="why-icon">🏗️</div>
@@ -1215,8 +1127,8 @@
             </div>
             <div class="why-card reveal">
                 <div class="why-icon">💰</div>
-                <h3>Férovosť</h3>
-                <p>Transparentné ceny bez skrytých poplatkov. Dostanete presnú cenovú ponuku ešte pred zahájením prác.</p>
+                <h3>Férová cena</h3>
+                <p>Presná cenová ponuka vopred — žiadne skryté poplatky, žiadne prekvapenia na konci.</p>
             </div>
         </div>
     </div>
@@ -1226,10 +1138,10 @@
 <section id="gallery">
     <div class="container">
         <h2 class="section-title reveal">Naše <span class="accent">realizácie</span></h2>
-        <p class="section-subtitle reveal">Ukážky demolačných prác a projektov dokončených v Rajeckej doline.</p>
+        <p class="section-subtitle reveal">Ukážky dokončených demolačných prác v Rajeckej doline.</p>
         <div class="gallery-grid">
             <div class="gallery-item reveal" onclick="openLightbox(0)">
-                <img src="images/hero.png" alt="Demoličné práce DRAVIO – Rajecká dolina" loading="lazy">
+                <img src="images/hero.png" alt="Demoličné práce – DRAVIO" loading="lazy">
                 <div class="gallery-overlay"><span>+</span></div>
             </div>
             <div class="gallery-item reveal" onclick="openLightbox(1)">
@@ -1237,7 +1149,7 @@
                 <div class="gallery-overlay"><span>+</span></div>
             </div>
             <div class="gallery-item reveal" onclick="openLightbox(2)">
-                <img src="images/gallery2.png" alt="Odvoz sutiny – DRAVIO" loading="lazy">
+                <img src="images/gallery2.png" alt="Odvoz sutiny" loading="lazy">
                 <div class="gallery-overlay"><span>+</span></div>
             </div>
             <div class="gallery-item reveal" onclick="openLightbox(3)">
@@ -1260,19 +1172,19 @@
 <section id="contact">
     <div class="container">
         <h2 class="section-title reveal">Kontaktujte <span class="accent">nás</span></h2>
-        <p class="section-subtitle reveal">Bezplatná obhliadka a cenová ponuka — bez záväzkov, do 24 hodín.</p>
+        <p class="section-subtitle reveal">Zavolajte alebo vyplňte formulár — odpovieme do 24 hodín. Obhliadka je vždy zadarmo.</p>
         <div class="contact-grid">
             <div class="reveal-left">
                 <div class="contact-label">Spojte sa s nami</div>
-                <h3 class="contact-heading">Dohodneme<br>obhliadku</h3>
-                <p class="contact-desc">Zavolajte alebo napíšte — príde k vám náš odborník, posúdi situáciu a pripraví presnú cenovú ponuku. Zadarmo, bez záväzkov.</p>
+                <h3 class="contact-heading">Sme tu<br>pre vás</h3>
+                <p class="contact-desc">Neváhajte zavolať — radi poradíme aj bez objednávky. Príde k vám náš odborník, pozrie situáciu a pripraví ponuku zadarmo.</p>
                 <div class="contact-info">
-                    <div class="contact-item">
+                    <div class="contact-item contact-phone-big">
                         <div class="contact-icon">📞</div>
                         <div>
-                            <h4>Telefón</h4>
+                            <h4>Telefón (nonstop)</h4>
                             <p><a href="tel:+421900000000">+421 900 000 000</a></p>
-                            <p style="font-size:0.8rem; color:var(--steel-dim); margin-top:0.2rem;">Nonstop — 24 hodín denne</p>
+                            <p style="font-size:0.82rem; color:var(--steel-dim); margin-top:0.2rem;">Zdvihneme kedykoľvek — 24/7</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1285,62 +1197,68 @@
                     <div class="contact-item">
                         <div class="contact-icon">📍</div>
                         <div>
-                            <h4>Pôsobnosť</h4>
-                            <p>Rajecká dolina — Rajec, Rajecké Teplice, Fačkov, Čičmany a okolie</p>
+                            <h4>Kde pôsobíme</h4>
+                            <p>Rajec, Rajecké Teplice, Fačkov, Čičmany a celá Rajecká dolina</p>
                         </div>
                     </div>
                     <div class="contact-item">
                         <div class="contact-icon">⏰</div>
                         <div>
-                            <h4>Dostupnosť</h4>
-                            <p style="color: var(--red); font-weight: 700;">Nonstop — 24/7</p>
+                            <h4>Pracovná doba</h4>
+                            <p style="color:var(--red); font-weight:800;">Nonstop — 24 hodín, 7 dní v týždni</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="contact-form reveal-right">
                 <div class="contact-form-title">Nezáväzná cenová ponuka</div>
+                <p class="contact-form-hint">Vyplňte formulár a my sa vám ozveme do 24 hodín.</p>
                 <form id="contactForm" onsubmit="handleSubmit(event)">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="name">Meno a priezvisko</label>
-                            <input type="text" id="name" name="name" placeholder="Vaše meno" required>
+                            <label for="name">Vaše meno</label>
+                            <input type="text" id="name" name="name" placeholder="Ján Novák" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Telefón</label>
+                            <label for="phone">Telefónne číslo</label>
                             <input type="tel" id="phone" name="phone" placeholder="+421 ...">
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="email">Email</label>
+                        <label for="email">Emailová adresa</label>
                         <input type="email" id="email" name="email" placeholder="vas@email.sk" required>
                     </div>
                     <div class="form-group">
-                        <label for="service">Typ prác</label>
+                        <label for="service">Čo potrebujete?</label>
                         <select id="service" name="service">
                             <option value="">Vyberte typ prác...</option>
-                            <option value="demolacia-budovy">Demolácia budovy</option>
-                            <option value="buracie-prace">Búracie práce (interiér)</option>
-                            <option value="odvoz-sutiny">Odvoz sutiny</option>
+                            <option value="demolacia-budovy">Demolácia celej budovy</option>
+                            <option value="buracie-prace">Búracie práce vo vnútri</option>
+                            <option value="odvoz-sutiny">Odvoz sutiny a odpadu</option>
                             <option value="zemne-prace">Zemné práce</option>
-                            <option value="ine">Iné</option>
+                            <option value="ine">Iné / Neviem presne</option>
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="message">Popis zákazky</label>
-                        <textarea id="message" name="message" placeholder="Opíšte, čo potrebujete — typ stavby, rozsah, lokalita..." required></textarea>
+                        <label for="message">Krátky popis (čo, kde, rozsah)</label>
+                        <textarea id="message" name="message" placeholder="Napr.: Chcem zbúrať starý rodinný dom v Rajci, poschodový, cca 120m². Kedy môžete prísť na obhliadku?" required></textarea>
                     </div>
-                    <button type="submit" class="btn form-submit">Odoslať požiadavku</button>
+                    <div class="captcha-box" id="captchaBox" onclick="document.getElementById('captchaCheck').click()">
+                        <input type="checkbox" class="captcha-checkbox" id="captchaCheck" onchange="verifyCaptcha()" onclick="event.stopPropagation()">
+                        <label for="captchaCheck" class="captcha-label">Nie som robot</label>
+                        <span class="captcha-icon">🔒</span>
+                    </div>
+                    <button type="submit" class="btn form-submit">
+                        📩 Odoslať požiadavku
+                    </button>
                 </form>
             </div>
         </div>
         <div class="map-wrapper reveal">
             <iframe
                 src="https://maps.google.com/maps?q=Rajec,+Slovensko&t=&z=11&ie=UTF8&iwloc=&output=embed"
-                allowfullscreen
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-                title="Mapa pôsobnosti – DRAVIO s.r.o., Rajecká dolina">
+                allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Oblasť pôsobnosti DRAVIO s.r.o. – Rajecká dolina">
             </iframe>
         </div>
     </div>
@@ -1349,23 +1267,44 @@
 <!-- Footer -->
 <footer>
     <div class="container">
-        <div class="footer-content">
-            <div class="footer-logo">DRAVIO <span>s.r.o.</span></div>
+        <div class="footer-main">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <img src="images/logo.svg" alt="DRAVIO logo">
+                    <span class="footer-logo-name">DRAVIO <span>s.r.o.</span></span>
+                </div>
+                <p class="footer-desc">Profesionálne demoličné a búracie práce v Rajeckej doline. Moderná technika, nonstop dostupnosť, férové ceny.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navigácia</h4>
+                <ul>
+                    <li><a href="#about">O firme</a></li>
+                    <li><a href="#services">Naše služby</a></li>
+                    <li><a href="#how-to-book">Ako sa objednať</a></li>
+                    <li><a href="#gallery">Realizácie</a></li>
+                    <li><a href="#contact">Kontakt</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Kontakt</h4>
+                <a href="tel:+421900000000" class="footer-phone">+421 900 000 000</a>
+                <span class="footer-hours">Nonstop — 24/7</span>
+                <a href="mailto:info@dravio.sk" style="color:var(--steel); font-size:0.9rem; display:block; margin-top:0.8rem;">info@dravio.sk</a>
+                <p style="font-size:0.85rem; color:var(--steel-dim); margin-top:0.8rem;">Rajecká dolina, Slovensko</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
             <p class="footer-copy">© 2025 DRAVIO s.r.o. — Demoličné práce, Rajecká dolina. Všetky práva vyhradené.</p>
-            <div class="footer-links">
-                <a href="#about">O firme</a>
-                <a href="#services">Služby</a>
-                <a href="#contact">Kontakt</a>
+            <div style="display:flex; gap:1.5rem;">
+                <a href="#about" style="color:var(--steel-dim); font-size:0.82rem;">O firme</a>
+                <a href="#contact" style="color:var(--steel-dim); font-size:0.82rem;">Kontakt</a>
             </div>
         </div>
     </div>
 </footer>
 
-<!-- Back to Top -->
-<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-
 <script>
-    // ===== HAMBURGER MENU =====
+    // ===== HAMBURGER =====
     const hamburger = document.getElementById('hamburger');
     const mobileNav = document.getElementById('mobileNav');
     hamburger.addEventListener('click', () => {
@@ -1379,113 +1318,137 @@
         document.body.style.overflow = '';
     }
 
-    // ===== SCROLL EFFECTS =====
+    // ===== SCROLL =====
     const header = document.getElementById('header');
     const scrollProgress = document.getElementById('scrollProgress');
     const backToTop = document.getElementById('backToTop');
-
     window.addEventListener('scroll', () => {
         header.classList.toggle('scrolled', window.scrollY > 80);
-        const winScroll = document.documentElement.scrollTop;
-        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        scrollProgress.style.width = (winScroll / height) * 100 + '%';
+        const h = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        scrollProgress.style.width = (document.documentElement.scrollTop / h) * 100 + '%';
         backToTop.classList.toggle('visible', window.scrollY > 500);
     });
 
-    // ===== REVEAL ON SCROLL =====
-    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach((entry, i) => {
-            if (entry.isIntersecting) {
-                setTimeout(() => entry.target.classList.add('active'), i * 80);
-                observer.unobserve(entry.target);
+    // ===== REVEAL =====
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObs = new IntersectionObserver((entries) => {
+        entries.forEach((e, i) => {
+            if (e.isIntersecting) {
+                setTimeout(() => e.target.classList.add('active'), i * 80);
+                revealObs.unobserve(e.target);
             }
         });
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    revealElements.forEach(el => observer.observe(el));
+    revealEls.forEach(el => revealObs.observe(el));
 
-    // ===== COUNTER ANIMATION =====
+    // ===== COUNTERS =====
     const counters = document.querySelectorAll('[data-count]');
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const el = entry.target;
+    const cObs = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                const el = e.target;
                 const target = parseInt(el.dataset.count);
-                const duration = 1800;
-                const step = target / (duration / 16);
                 let current = 0;
+                const step = target / (1800 / 16);
                 const timer = setInterval(() => {
                     current += step;
                     if (current >= target) { current = target; clearInterval(timer); }
                     el.textContent = Math.floor(current) + (target === 100 ? '%' : target === 24 ? '/7' : '+');
                 }, 16);
-                counterObserver.unobserve(el);
+                cObs.unobserve(el);
             }
         });
     }, { threshold: 0.5 });
-    counters.forEach(c => counterObserver.observe(c));
+    counters.forEach(c => cObs.observe(c));
 
-    // ===== ACTIVE NAV LINK =====
+    // ===== ACTIVE NAV =====
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
     window.addEventListener('scroll', () => {
         let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 120;
-            if (window.scrollY >= sectionTop) current = section.getAttribute('id');
-        });
-        navLinks.forEach(link => {
-            link.classList.toggle('active', link.getAttribute('href') === '#' + current);
-        });
+        sections.forEach(s => { if (window.scrollY >= s.offsetTop - 120) current = s.id; });
+        navLinks.forEach(l => l.classList.toggle('active', l.getAttribute('href') === '#' + current));
     });
+
+    // ===== SLIDESHOW =====
+    const slides = document.querySelectorAll('.hero-slide');
+    const dots   = document.querySelectorAll('.slide-dot');
+    let currentSlide = 0;
+    let slideTimer   = null;
+
+    function goToSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        currentSlide = index;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+        clearInterval(slideTimer);
+        slideTimer = setInterval(nextSlide, 3200);
+    }
+    function nextSlide() { goToSlide((currentSlide + 1) % slides.length); }
+    slideTimer = setInterval(nextSlide, 3200);
 
     // ===== LIGHTBOX =====
     const images = [
-        { src: 'images/hero.png', alt: 'Demoličné práce DRAVIO – Rajecká dolina' },
+        { src: 'images/hero.png',     alt: 'Demoličné práce DRAVIO' },
         { src: 'images/gallery1.png', alt: 'Búracie práce Rajec' },
-        { src: 'images/gallery2.png', alt: 'Odvoz sutiny DRAVIO' },
+        { src: 'images/gallery2.png', alt: 'Odvoz sutiny' },
         { src: 'images/gallery3.png', alt: 'Zemné práce Rajecká dolina' }
     ];
     let currentImg = 0;
-    const lightbox = document.getElementById('lightbox');
+    const lightbox    = document.getElementById('lightbox');
     const lightboxImg = document.getElementById('lightboxImg');
-
-    function openLightbox(index) {
-        currentImg = index;
-        lightboxImg.src = images[index].src;
-        lightboxImg.alt = images[index].alt;
-        lightbox.classList.add('open');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeLightbox() {
-        lightbox.classList.remove('open');
-        document.body.style.overflow = '';
-    }
-    function changeLightbox(dir) {
-        currentImg = (currentImg + dir + images.length) % images.length;
-        lightboxImg.src = images[currentImg].src;
-    }
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) closeLightbox();
-    });
-    document.addEventListener('keydown', (e) => {
+    function openLightbox(i) { currentImg = i; lightboxImg.src = images[i].src; lightboxImg.alt = images[i].alt; lightbox.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeLightbox() { lightbox.classList.remove('open'); document.body.style.overflow = ''; }
+    function changeLightbox(d) { currentImg = (currentImg + d + images.length) % images.length; lightboxImg.src = images[currentImg].src; }
+    lightbox.addEventListener('click', e => { if (e.target === lightbox) closeLightbox(); });
+    document.addEventListener('keydown', e => {
         if (!lightbox.classList.contains('open')) return;
         if (e.key === 'Escape') closeLightbox();
-        if (e.key === 'ArrowLeft') changeLightbox(-1);
+        if (e.key === 'ArrowLeft')  changeLightbox(-1);
         if (e.key === 'ArrowRight') changeLightbox(1);
     });
 
-    // ===== CONTACT FORM =====
+    // ===== CAPTCHA =====
+    function verifyCaptcha() {
+        const box   = document.getElementById('captchaBox');
+        const check = document.getElementById('captchaCheck');
+        const label = box.querySelector('.captcha-label');
+        const icon  = box.querySelector('.captcha-icon');
+        if (check.checked) {
+            box.classList.add('verified');
+            label.textContent = 'Overenie úspešné';
+            icon.textContent  = '✅';
+        } else {
+            box.classList.remove('verified');
+            label.textContent = 'Nie som robot';
+            icon.textContent  = '🔒';
+        }
+    }
+
+    // ===== FORM =====
     function handleSubmit(e) {
         e.preventDefault();
-        const name = document.getElementById('name').value;
-        const phone = document.getElementById('phone').value;
-        const email = document.getElementById('email').value;
+        const captcha = document.getElementById('captchaCheck');
+        if (!captcha.checked) {
+            const box = document.getElementById('captchaBox');
+            box.style.borderColor = 'var(--red)';
+            box.style.boxShadow   = '0 0 0 3px rgba(220,38,38,0.15)';
+            box.querySelector('.captcha-label').textContent = '⚠️ Prosím zaškrtnite políčko!';
+            setTimeout(() => {
+                box.style.borderColor = '';
+                box.style.boxShadow   = '';
+                if (!captcha.checked) box.querySelector('.captcha-label').textContent = 'Nie som robot';
+            }, 2800);
+            return;
+        }
+        const name    = document.getElementById('name').value;
+        const phone   = document.getElementById('phone').value;
+        const email   = document.getElementById('email').value;
         const service = document.getElementById('service').value;
         const message = document.getElementById('message').value;
-        const body = `Meno: ${name}\nTelefón: ${phone}\nEmail: ${email}\nTyp prác: ${service}\n\nSpráva:\n${message}`;
-        const mailto = `mailto:info@dravio.sk?subject=Cenová ponuka – ${encodeURIComponent(name)}&body=${encodeURIComponent(body)}`;
-        window.location.href = mailto;
+        const body    = `Meno: ${name}\nTelefón: ${phone}\nEmail: ${email}\nTyp prác: ${service}\n\nPopis:\n${message}`;
+        window.location.href = `mailto:info@dravio.sk?subject=Cenová ponuka – ${encodeURIComponent(name)}&body=${encodeURIComponent(body)}`;
     }
 </script>
 </body>
