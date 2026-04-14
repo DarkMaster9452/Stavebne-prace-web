@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <script type="application/ld+json">
     {
@@ -133,6 +134,40 @@
             font-weight: 800;
         }
         .btn-phone:hover { background: var(--red-dark); }
+
+        /* ===== ICON SYSTEM (Font Awesome) ===== */
+        .fa-icon-wrap {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+        /* Service / Why / Contact icon boxes */
+        .service-icon i,
+        .contact-icon i { font-size: 1.4rem; color: var(--white); }
+        .service-card:hover .service-icon i,
+        .service-card.featured .service-icon i { color: var(--white); }
+
+        /* Why icon — standalone, no box */
+        .why-icon { font-size: 0; } /* reset emoji size */
+        .why-icon i { font-size: 2rem; color: var(--red); }
+
+        /* Book step icon */
+        .book-step-icon i { font-size: 2.4rem; color: var(--red); }
+
+        /* Trust bar */
+        .trust-item .ti-icon i { font-size: 1rem; color: var(--red); }
+
+        /* Float call */
+        .float-call i { font-size: 1.1rem; }
+
+        /* Contact icon box */
+        .contact-icon i { font-size: 1.2rem; color: var(--red); }
+
+        /* Mobile call link */
+        .mobile-call i { font-size: 1.1rem; }
+
+        /* Submit button */
+        .btn i { font-size: 0.95rem; }
 
         /* ===== SCROLL PROGRESS ===== */
         .scroll-progress {
@@ -1040,7 +1075,7 @@
 
 <!-- Floating call button -->
 <a href="tel:+421900000000" class="float-call">
-    <span class="fc-icon">📞</span>
+    <span class="fc-icon"><i class="fas fa-phone"></i></span>
     <span class="fc-text">Zavolajte nám</span>
 </a>
 
@@ -1081,7 +1116,7 @@
     <a href="#how-to-book" onclick="closeMenu()">Ako sa objednať</a>
     <a href="#gallery" onclick="closeMenu()">Realizácie</a>
     <a href="#contact" onclick="closeMenu()">Kontakt</a>
-    <a href="tel:+421900000000" class="mobile-call">📞 +421 900 000 000</a>
+    <a href="tel:+421900000000" class="mobile-call"><i class="fas fa-phone"></i> +421 900 000 000</a>
 </div>
 
 <!-- HERO -->
@@ -1108,7 +1143,7 @@
             Moderná technika — rýchlo, bezpečne, spoľahlivo.
         </p>
         <div class="hero-phone">
-            <span class="hero-phone-icon">📞</span>
+            <span class="hero-phone-icon"><i class="fas fa-phone"></i></span>
             <div>
                 <a href="tel:+421900000000">+421 900 000 000</a>
                 <span class="hero-phone-label">Nonstop — zavolajte kedykoľvek</span>
@@ -1134,11 +1169,11 @@
 <div id="trust-bar">
     <div class="container">
         <div class="trust-items">
-            <div class="trust-item"><span class="ti-icon">⚡</span> Nonstop dostupnosť</div>
-            <div class="trust-item"><span class="ti-icon">🏗️</span> Moderná technika</div>
-            <div class="trust-item"><span class="ti-icon">✅</span> Skúsená firma</div>
-            <div class="trust-item"><span class="ti-icon">📍</span> Rajecká dolina</div>
-            <div class="trust-item"><span class="ti-icon">🤝</span> Bezplatná obhliadka</div>
+            <div class="trust-item"><span class="ti-icon"><i class="fas fa-bolt"></i></span> Nonstop dostupnosť</div>
+            <div class="trust-item"><span class="ti-icon"><i class="fas fa-trowel-bricks"></i></span> Moderná technika</div>
+            <div class="trust-item"><span class="ti-icon"><i class="fas fa-shield-halved"></i></span> Skúsená firma</div>
+            <div class="trust-item"><span class="ti-icon"><i class="fas fa-location-dot"></i></span> Rajecká dolina</div>
+            <div class="trust-item"><span class="ti-icon"><i class="fas fa-handshake"></i></span> Bezplatná obhliadka</div>
         </div>
     </div>
 </div>
@@ -1155,7 +1190,7 @@
                 <a href="tel:+421900000000">+421 900 000 000</a>
             </div>
             <a href="tel:+421900000000" class="btn btn-phone" style="background:#fff; color:#dc2626;">
-                📞 Zavolať teraz
+                <i class="fas fa-phone"></i> Zavolať teraz
             </a>
         </div>
     </div>
@@ -1186,7 +1221,7 @@
                 <div class="about-img-wrap">
                     <img src="images/gallery1.png" alt="Demoličné práce DRAVIO – Rajecká dolina" loading="lazy">
                     <div class="about-badge">
-                        <img src="images/logo.svg" alt="DRAVIO logo">
+                        <i class="fas fa-hard-hat" style="color:#fff; font-size:1.4rem; flex-shrink:0;"></i>
                         <span>DRAVIO s.r.o. — Demoličné práce</span>
                     </div>
                 </div>
@@ -1203,7 +1238,7 @@
         <div class="book-steps">
             <div class="book-step book-highlight reveal">
                 <span class="book-step-num">1</span>
-                <span class="book-step-icon">📞</span>
+                <span class="book-step-icon"><i class="fas fa-phone"></i></span>
                 <h3>Zavolajte nám</h3>
                 <p>Stačí zavolať na číslo nižšie. Opíšte nám, čo potrebujete — zaobstaráme zvyšok.</p>
                 <a href="tel:+421900000000" class="btn book-step-cta">
@@ -1212,13 +1247,13 @@
             </div>
             <div class="book-step reveal">
                 <span class="book-step-num">2</span>
-                <span class="book-step-icon">🏠</span>
+                <span class="book-step-icon"><i class="fas fa-house"></i></span>
                 <h3>Prídeme k vám</h3>
                 <p>Náš odborník príde na miesto, prezrie situáciu a pripraví cenovú ponuku. Zadarmo, bez záväzkov.</p>
             </div>
             <div class="book-step reveal">
                 <span class="book-step-num">3</span>
-                <span class="book-step-icon">✅</span>
+                <span class="book-step-icon"><i class="fas fa-circle-check"></i></span>
                 <h3>Práca hotová</h3>
                 <p>V dohodnutý termín nastúpime s technikou a prácu dokončíme. Odovzdáme vám čistú parcelu.</p>
             </div>
@@ -1233,32 +1268,32 @@
         <p class="section-subtitle reveal">Všetko čo potrebujete pre demoláciu — od búrania až po odvoz sutiny. Jedna firma, jeden hovor.</p>
         <div class="services-grid">
             <div class="service-card featured reveal">
-                <div class="service-icon">💥</div>
+                <div class="service-icon"><i class="fas fa-explosion"></i></div>
                 <h3>Demoličné práce</h3>
                 <p>Búranie stavieb všetkých typov — rodinné domy, priemyselné haly, prístavby, komíny. Bezpečne a kontrolovane.</p>
             </div>
             <div class="service-card reveal">
-                <div class="service-icon">🧱</div>
+                <div class="service-icon"><i class="fas fa-sledgehammer"></i></div>
                 <h3>Búracie práce</h3>
                 <p>Búranie vnútorných konštrukcií, priečok, stropov, schodísk. Presné búranie bez poškodenia zvyšku.</p>
             </div>
             <div class="service-card reveal">
-                <div class="service-icon">♻️</div>
+                <div class="service-icon"><i class="fas fa-truck-ramp-box"></i></div>
                 <h3>Odvoz sutiny</h3>
                 <p>Kompletný odvoz a ekologická likvidácia demolačného odpadu. Zákonné nakladanie s odpadmi.</p>
             </div>
             <div class="service-card reveal">
-                <div class="service-icon">⛏️</div>
+                <div class="service-icon"><i class="fas fa-trowel"></i></div>
                 <h3>Zemné práce</h3>
                 <p>Výkopy základov, terénne úpravy, odstraňovanie betónových konštrukcií po demolácii.</p>
             </div>
             <div class="service-card reveal">
-                <div class="service-icon">🚛</div>
+                <div class="service-icon"><i class="fas fa-truck"></i></div>
                 <h3>Nákladná doprava</h3>
                 <p>Preprava demolačného materiálu sklápačmi. Spoľahlivá logistika pre celú Rajeckú dolinu.</p>
             </div>
             <div class="service-card reveal">
-                <div class="service-icon">📋</div>
+                <div class="service-icon"><i class="fas fa-clipboard-list"></i></div>
                 <h3>Poradenstvo</h3>
                 <p>Bezplatná obhliadka a konzultácia. Pomôžeme s povoleniami a vypracujeme postup demolácie.</p>
             </div>
@@ -1303,22 +1338,22 @@
         <p class="section-subtitle reveal">Výber správnej demolačnej firmy je dôležitý. Tu je dôvod, prečo nás klienti odporúčajú ďalej.</p>
         <div class="why-grid">
             <div class="why-card reveal">
-                <div class="why-icon">⚡</div>
+                <div class="why-icon"><i class="fas fa-bolt"></i></div>
                 <h3>Nonstop 24/7</h3>
                 <p>Dostupní kedykoľvek — aj cez víkend a sviatky. Urgentné situácie riešime okamžite.</p>
             </div>
             <div class="why-card reveal">
-                <div class="why-icon">🦺</div>
+                <div class="why-icon"><i class="fas fa-helmet-safety"></i></div>
                 <h3>Bezpečnosť</h3>
                 <p>Každá demolácia prebieha podľa bezpečnostných noriem. Ochrana okolia a majetku je priorita.</p>
             </div>
             <div class="why-card reveal">
-                <div class="why-icon">🏗️</div>
+                <div class="why-icon"><i class="fas fa-trowel-bricks"></i></div>
                 <h3>Moderná technika</h3>
                 <p>Hydraulické búracie kladivá, bagre, minibagre — vždy správny stroj pre správnu prácu.</p>
             </div>
             <div class="why-card reveal">
-                <div class="why-icon">💰</div>
+                <div class="why-icon"><i class="fas fa-coins"></i></div>
                 <h3>Férová cena</h3>
                 <p>Presná cenová ponuka vopred — žiadne skryté poplatky, žiadne prekvapenia na konci.</p>
             </div>
@@ -1372,7 +1407,7 @@
                 <p class="contact-desc">Neváhajte zavolať — radi poradíme aj bez objednávky. Príde k vám náš odborník, pozrie situáciu a pripraví ponuku zadarmo.</p>
                 <div class="contact-info">
                     <div class="contact-item contact-phone-big">
-                        <div class="contact-icon">📞</div>
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
                         <div>
                             <h4>Telefón (nonstop)</h4>
                             <p><a href="tel:+421900000000">+421 900 000 000</a></p>
@@ -1380,21 +1415,21 @@
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">✉️</div>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div>
                             <h4>Email</h4>
                             <p><a href="mailto:info@dravio.sk">info@dravio.sk</a></p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">📍</div>
+                        <div class="contact-icon"><i class="fas fa-location-dot"></i></div>
                         <div>
                             <h4>Kde pôsobíme</h4>
                             <p>Rajec, Rajecké Teplice, Fačkov, Čičmany a celá Rajecká dolina</p>
                         </div>
                     </div>
                     <div class="contact-item">
-                        <div class="contact-icon">⏰</div>
+                        <div class="contact-icon"><i class="fas fa-clock"></i></div>
                         <div>
                             <h4>Pracovná doba</h4>
                             <p style="color:var(--red); font-weight:800;">Nonstop — 24 hodín, 7 dní v týždni</p>
@@ -1443,7 +1478,7 @@
                         </div>
                     </div>
                     <button type="submit" class="btn form-submit">
-                        📩 Odoslať požiadavku
+                        <i class="fas fa-paper-plane"></i> Odoslať požiadavku
                     </button>
                 </form>
             </div>
