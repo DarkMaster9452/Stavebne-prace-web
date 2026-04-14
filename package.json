@@ -1,0 +1,11 @@
+{
+  "name": "stavebne-prace-web",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "vercel:build": "npx vercel build",
+    "vercel:build:prod": "npx vercel build --prod",
+    "vercel:deploy": "npx vercel deploy --prebuilt",
+    "vercel:deploy:prod": "npx vercel deploy --prebuilt --prod"
+  }
+}
