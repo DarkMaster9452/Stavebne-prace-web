@@ -12,6 +12,7 @@
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://dravio.sk/">
     <link rel="icon" href="images/logo.svg" type="image/svg+xml">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -738,38 +739,31 @@
         .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
         .form-submit { margin-top: 0.8rem; width: 100%; justify-content: center; padding: 1.2rem; font-size: 1.05rem; }
 
-        /* CAPTCHA */
-        .captcha-box {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            padding: 1rem 1.2rem;
-            background: var(--black);
-            border: 1.5px solid rgba(255,255,255,0.08);
-            border-radius: 4px;
+        /* RECAPTCHA */
+        .recaptcha-wrap {
             margin-bottom: 1.2rem;
-            transition: border-color 0.3s;
-            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
         }
-        .captcha-box:hover { border-color: rgba(220,38,38,0.35); }
-        .captcha-checkbox {
-            width: 26px; height: 26px;
-            border: 2px solid rgba(255,255,255,0.25);
-            border-radius: 5px;
-            background: var(--black-card);
-            cursor: pointer;
-            flex-shrink: 0;
-            appearance: none;
-            -webkit-appearance: none;
-            position: relative;
-            transition: border-color 0.3s, background 0.3s;
+        .recaptcha-wrap label {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--steel);
         }
-        .captcha-checkbox:checked { background: var(--red); border-color: var(--red); }
-        .captcha-checkbox:checked::after { content: ''; position: absolute; top: 3px; left: 8px; width: 6px; height: 11px; border: 2.5px solid #fff; border-top: none; border-left: none; transform: rotate(45deg); }
-        .captcha-label { font-size: 1rem; font-weight: 600; color: var(--steel); cursor: pointer; user-select: none; flex: 1; }
-        .captcha-icon { font-size: 1.4rem; }
-        .captcha-box.verified { border-color: rgba(34,197,94,0.4); }
-        .captcha-box.verified .captcha-label { color: #86efac; }
+        /* Dark reCAPTCHA widget naturally fits the dark theme */
+        .g-recaptcha { display: inline-block; }
+        .recaptcha-error {
+            display: none;
+            font-size: 0.88rem;
+            color: #f87171;
+            font-weight: 600;
+            padding: 0.5rem 0.8rem;
+            background: rgba(220,38,38,0.1);
+            border: 1px solid rgba(220,38,38,0.3);
+            border-radius: 4px;
+        }
+        .recaptcha-error.show { display: block; }
 
         /* Map */
         .map-wrapper { margin-top: 4rem; border-radius: 6px; overflow: hidden; border: 1px solid rgba(255,255,255,0.04); }
@@ -1243,10 +1237,17 @@
                         <label for="message">Krátky popis (čo, kde, rozsah)</label>
                         <textarea id="message" name="message" placeholder="Napr.: Chcem zbúrať starý rodinný dom v Rajci, poschodový, cca 120m². Kedy môžete prísť na obhliadku?" required></textarea>
                     </div>
-                    <div class="captcha-box" id="captchaBox" onclick="document.getElementById('captchaCheck').click()">
-                        <input type="checkbox" class="captcha-checkbox" id="captchaCheck" onchange="verifyCaptcha()" onclick="event.stopPropagation()">
-                        <label for="captchaCheck" class="captcha-label">Nie som robot</label>
-                        <span class="captcha-icon">🔒</span>
+                    <div class="recaptcha-wrap">
+                        <label>Overenie</label>
+                        <div class="g-recaptcha"
+                             data-sitekey="your_site_key"
+                             data-theme="dark"
+                             data-callback="onRecaptchaSuccess"
+                             data-expired-callback="onRecaptchaExpired">
+                        </div>
+                        <div class="recaptcha-error" id="recaptchaError">
+                            ⚠️ Prosím potvrďte, že nie ste robot.
+                        </div>
                     </div>
                     <button type="submit" class="btn form-submit">
                         📩 Odoslať požiadavku
@@ -1409,37 +1410,22 @@
         if (e.key === 'ArrowRight') changeLightbox(1);
     });
 
-    // ===== CAPTCHA =====
-    function verifyCaptcha() {
-        const box   = document.getElementById('captchaBox');
-        const check = document.getElementById('captchaCheck');
-        const label = box.querySelector('.captcha-label');
-        const icon  = box.querySelector('.captcha-icon');
-        if (check.checked) {
-            box.classList.add('verified');
-            label.textContent = 'Overenie úspešné';
-            icon.textContent  = '✅';
-        } else {
-            box.classList.remove('verified');
-            label.textContent = 'Nie som robot';
-            icon.textContent  = '🔒';
-        }
+    // ===== RECAPTCHA CALLBACKS =====
+    let recaptchaDone = false;
+    function onRecaptchaSuccess(token) {
+        recaptchaDone = true;
+        document.getElementById('recaptchaError').classList.remove('show');
+    }
+    function onRecaptchaExpired() {
+        recaptchaDone = false;
     }
 
     // ===== FORM =====
     function handleSubmit(e) {
         e.preventDefault();
-        const captcha = document.getElementById('captchaCheck');
-        if (!captcha.checked) {
-            const box = document.getElementById('captchaBox');
-            box.style.borderColor = 'var(--red)';
-            box.style.boxShadow   = '0 0 0 3px rgba(220,38,38,0.15)';
-            box.querySelector('.captcha-label').textContent = '⚠️ Prosím zaškrtnite políčko!';
-            setTimeout(() => {
-                box.style.borderColor = '';
-                box.style.boxShadow   = '';
-                if (!captcha.checked) box.querySelector('.captcha-label').textContent = 'Nie som robot';
-            }, 2800);
+        if (!recaptchaDone) {
+            document.getElementById('recaptchaError').classList.add('show');
+            document.querySelector('.g-recaptcha').scrollIntoView({ behavior: 'smooth', block: 'center' });
             return;
         }
         const name    = document.getElementById('name').value;
