@@ -12,7 +12,7 @@
     <meta property="og:type" content="website">
     <link rel="canonical" href="https://dravio.sk/">
     <link rel="icon" href="images/logo.svg" type="image/svg+xml">
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=renderRecaptcha&render=explicit" async defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Barlow+Condensed:wght@600;700;800;900&display=swap" rel="stylesheet">
@@ -1239,12 +1239,7 @@
                     </div>
                     <div class="recaptcha-wrap">
                         <label>Overenie</label>
-                        <div class="g-recaptcha"
-                             data-sitekey="your_site_key"
-                             data-theme="dark"
-                             data-callback="onRecaptchaSuccess"
-                             data-expired-callback="onRecaptchaExpired">
-                        </div>
+                        <div id="recaptchaWidget"></div>
                         <div class="recaptcha-error" id="recaptchaError">
                             ⚠️ Prosím potvrďte, že nie ste robot.
                         </div>
@@ -1410,14 +1405,34 @@
         if (e.key === 'ArrowRight') changeLightbox(1);
     });
 
-    // ===== RECAPTCHA CALLBACKS =====
+    // ===== RECAPTCHA — load sitekey from env via /api/config =====
     let recaptchaDone = false;
+
     function onRecaptchaSuccess(token) {
         recaptchaDone = true;
         document.getElementById('recaptchaError').classList.remove('show');
     }
     function onRecaptchaExpired() {
         recaptchaDone = false;
+    }
+
+    // Called by reCAPTCHA script after it loads (data-onload on script tag)
+    function renderRecaptcha() {
+        fetch('/api/config')
+            .then(r => r.json())
+            .then(cfg => {
+                if (!cfg.recaptchaSiteKey) {
+                    console.warn('RECAPTCHA_SITE_KEY not set in Vercel env vars.');
+                    return;
+                }
+                grecaptcha.render('recaptchaWidget', {
+                    sitekey:           cfg.recaptchaSiteKey,
+                    theme:             'dark',
+                    callback:          onRecaptchaSuccess,
+                    'expired-callback': onRecaptchaExpired
+                });
+            })
+            .catch(() => console.warn('Could not load reCAPTCHA config.'));
     }
 
     // ===== FORM =====
